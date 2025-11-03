@@ -1,0 +1,6 @@
+@SmileCareAPI_HostAddress = http://localhost:5159
+
+GET {{SmileCareAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

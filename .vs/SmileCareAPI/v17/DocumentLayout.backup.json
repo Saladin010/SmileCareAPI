@@ -1,0 +1,228 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Projects\\SmileCareAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3DCAFA50-DE7E-4F8D-BE98-0A6F2E128FA3}|SmileCareAPI\\SmileCareAPI.csproj|d:\\projects\\smilecareapi\\smilecareapi\\controllers\\treatmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DCAFA50-DE7E-4F8D-BE98-0A6F2E128FA3}|SmileCareAPI\\SmileCareAPI.csproj|solutionrelative:smilecareapi\\controllers\\treatmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DCAFA50-DE7E-4F8D-BE98-0A6F2E128FA3}|SmileCareAPI\\SmileCareAPI.csproj|d:\\projects\\smilecareapi\\smilecareapi\\dtos\\treatmentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DCAFA50-DE7E-4F8D-BE98-0A6F2E128FA3}|SmileCareAPI\\SmileCareAPI.csproj|solutionrelative:smilecareapi\\dtos\\treatmentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DCAFA50-DE7E-4F8D-BE98-0A6F2E128FA3}|SmileCareAPI\\SmileCareAPI.csproj|d:\\projects\\smilecareapi\\smilecareapi\\models\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DCAFA50-DE7E-4F8D-BE98-0A6F2E128FA3}|SmileCareAPI\\SmileCareAPI.csproj|solutionrelative:smilecareapi\\models\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DCAFA50-DE7E-4F8D-BE98-0A6F2E128FA3}|SmileCareAPI\\SmileCareAPI.csproj|d:\\projects\\smilecareapi\\smilecareapi\\models\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DCAFA50-DE7E-4F8D-BE98-0A6F2E128FA3}|SmileCareAPI\\SmileCareAPI.csproj|solutionrelative:smilecareapi\\models\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DCAFA50-DE7E-4F8D-BE98-0A6F2E128FA3}|SmileCareAPI\\SmileCareAPI.csproj|d:\\projects\\smilecareapi\\smilecareapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DCAFA50-DE7E-4F8D-BE98-0A6F2E128FA3}|SmileCareAPI\\SmileCareAPI.csproj|solutionrelative:smilecareapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DCAFA50-DE7E-4F8D-BE98-0A6F2E128FA3}|SmileCareAPI\\SmileCareAPI.csproj|d:\\projects\\smilecareapi\\smilecareapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DCAFA50-DE7E-4F8D-BE98-0A6F2E128FA3}|SmileCareAPI\\SmileCareAPI.csproj|solutionrelative:smilecareapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DCAFA50-DE7E-4F8D-BE98-0A6F2E128FA3}|SmileCareAPI\\SmileCareAPI.csproj|d:\\projects\\smilecareapi\\smilecareapi\\repositories\\implementation\\treatmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DCAFA50-DE7E-4F8D-BE98-0A6F2E128FA3}|SmileCareAPI\\SmileCareAPI.csproj|solutionrelative:smilecareapi\\repositories\\implementation\\treatmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DCAFA50-DE7E-4F8D-BE98-0A6F2E128FA3}|SmileCareAPI\\SmileCareAPI.csproj|d:\\projects\\smilecareapi\\smilecareapi\\repositories\\interface\\itreatmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DCAFA50-DE7E-4F8D-BE98-0A6F2E128FA3}|SmileCareAPI\\SmileCareAPI.csproj|solutionrelative:smilecareapi\\repositories\\interface\\itreatmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DCAFA50-DE7E-4F8D-BE98-0A6F2E128FA3}|SmileCareAPI\\SmileCareAPI.csproj|d:\\projects\\smilecareapi\\smilecareapi\\controllers\\diagnosescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DCAFA50-DE7E-4F8D-BE98-0A6F2E128FA3}|SmileCareAPI\\SmileCareAPI.csproj|solutionrelative:smilecareapi\\controllers\\diagnosescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DCAFA50-DE7E-4F8D-BE98-0A6F2E128FA3}|SmileCareAPI\\SmileCareAPI.csproj|d:\\projects\\smilecareapi\\smilecareapi\\dtos\\diagnosisdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DCAFA50-DE7E-4F8D-BE98-0A6F2E128FA3}|SmileCareAPI\\SmileCareAPI.csproj|solutionrelative:smilecareapi\\dtos\\diagnosisdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DCAFA50-DE7E-4F8D-BE98-0A6F2E128FA3}|SmileCareAPI\\SmileCareAPI.csproj|d:\\projects\\smilecareapi\\smilecareapi\\repositories\\implementation\\diagdiagnosisrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DCAFA50-DE7E-4F8D-BE98-0A6F2E128FA3}|SmileCareAPI\\SmileCareAPI.csproj|solutionrelative:smilecareapi\\repositories\\implementation\\diagdiagnosisrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DCAFA50-DE7E-4F8D-BE98-0A6F2E128FA3}|SmileCareAPI\\SmileCareAPI.csproj|d:\\projects\\smilecareapi\\smilecareapi\\repositories\\interface\\idiagdiagnosisrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DCAFA50-DE7E-4F8D-BE98-0A6F2E128FA3}|SmileCareAPI\\SmileCareAPI.csproj|solutionrelative:smilecareapi\\repositories\\interface\\idiagdiagnosisrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Patient.cs",
+              "DocumentMoniker": "D:\\Projects\\SmileCareAPI\\SmileCareAPI\\Models\\Patient.cs",
+              "RelativeDocumentMoniker": "SmileCareAPI\\Models\\Patient.cs",
+              "ToolTip": "D:\\Projects\\SmileCareAPI\\SmileCareAPI\\Models\\Patient.cs",
+              "RelativeToolTip": "SmileCareAPI\\Models\\Patient.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAUwC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T14:15:58.958Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Doctor.cs",
+              "DocumentMoniker": "D:\\Projects\\SmileCareAPI\\SmileCareAPI\\Models\\Doctor.cs",
+              "RelativeDocumentMoniker": "SmileCareAPI\\Models\\Doctor.cs",
+              "ToolTip": "D:\\Projects\\SmileCareAPI\\SmileCareAPI\\Models\\Doctor.cs",
+              "RelativeToolTip": "SmileCareAPI\\Models\\Doctor.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAwwCYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T14:15:37.827Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TreatmentsController.cs",
+              "DocumentMoniker": "D:\\Projects\\SmileCareAPI\\SmileCareAPI\\Controllers\\TreatmentsController.cs",
+              "RelativeDocumentMoniker": "SmileCareAPI\\Controllers\\TreatmentsController.cs",
+              "ToolTip": "D:\\Projects\\SmileCareAPI\\SmileCareAPI\\Controllers\\TreatmentsController.cs",
+              "RelativeToolTip": "SmileCareAPI\\Controllers\\TreatmentsController.cs",
+              "ViewState": "AgIAAO0BAAAAAAAAAAAAwB0CAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T13:56:20.85Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "D:\\Projects\\SmileCareAPI\\SmileCareAPI\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "SmileCareAPI\\Controllers\\UsersController.cs",
+              "ToolTip": "D:\\Projects\\SmileCareAPI\\SmileCareAPI\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "SmileCareAPI\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAzwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T13:35:20.381Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TreatmentRepository.cs",
+              "DocumentMoniker": "D:\\Projects\\SmileCareAPI\\SmileCareAPI\\Repositories\\Implementation\\TreatmentRepository.cs",
+              "RelativeDocumentMoniker": "SmileCareAPI\\Repositories\\Implementation\\TreatmentRepository.cs",
+              "ToolTip": "D:\\Projects\\SmileCareAPI\\SmileCareAPI\\Repositories\\Implementation\\TreatmentRepository.cs",
+              "RelativeToolTip": "SmileCareAPI\\Repositories\\Implementation\\TreatmentRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgBAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T13:55:37.558Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ITreatmentRepository.cs",
+              "DocumentMoniker": "D:\\Projects\\SmileCareAPI\\SmileCareAPI\\Repositories\\Interface\\ITreatmentRepository.cs",
+              "RelativeDocumentMoniker": "SmileCareAPI\\Repositories\\Interface\\ITreatmentRepository.cs",
+              "ToolTip": "D:\\Projects\\SmileCareAPI\\SmileCareAPI\\Repositories\\Interface\\ITreatmentRepository.cs",
+              "RelativeToolTip": "SmileCareAPI\\Repositories\\Interface\\ITreatmentRepository.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwDAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T13:54:53.445Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TreatmentDTO.cs",
+              "DocumentMoniker": "D:\\Projects\\SmileCareAPI\\SmileCareAPI\\DTOs\\TreatmentDTO.cs",
+              "RelativeDocumentMoniker": "SmileCareAPI\\DTOs\\TreatmentDTO.cs",
+              "ToolTip": "D:\\Projects\\SmileCareAPI\\SmileCareAPI\\DTOs\\TreatmentDTO.cs",
+              "RelativeToolTip": "SmileCareAPI\\DTOs\\TreatmentDTO.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAD4vxYAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T13:54:02.687Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DiagnosesController.cs",
+              "DocumentMoniker": "D:\\Projects\\SmileCareAPI\\SmileCareAPI\\Controllers\\DiagnosesController.cs",
+              "RelativeDocumentMoniker": "SmileCareAPI\\Controllers\\DiagnosesController.cs",
+              "ToolTip": "D:\\Projects\\SmileCareAPI\\SmileCareAPI\\Controllers\\DiagnosesController.cs",
+              "RelativeToolTip": "SmileCareAPI\\Controllers\\DiagnosesController.cs",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAcwHEAAABjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T13:33:42.571Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DIAGDiagnosisRepository.cs",
+              "DocumentMoniker": "D:\\Projects\\SmileCareAPI\\SmileCareAPI\\Repositories\\Implementation\\DIAGDiagnosisRepository.cs",
+              "RelativeDocumentMoniker": "SmileCareAPI\\Repositories\\Implementation\\DIAGDiagnosisRepository.cs",
+              "ToolTip": "D:\\Projects\\SmileCareAPI\\SmileCareAPI\\Repositories\\Implementation\\DIAGDiagnosisRepository.cs",
+              "RelativeToolTip": "SmileCareAPI\\Repositories\\Implementation\\DIAGDiagnosisRepository.cs",
+              "ViewState": "AgIAAMQAAAAAAAAAAAAiwKIAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T13:33:08.653Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IDIAGDiagnosisRepository.cs",
+              "DocumentMoniker": "D:\\Projects\\SmileCareAPI\\SmileCareAPI\\Repositories\\Interface\\IDIAGDiagnosisRepository.cs",
+              "RelativeDocumentMoniker": "SmileCareAPI\\Repositories\\Interface\\IDIAGDiagnosisRepository.cs",
+              "ToolTip": "D:\\Projects\\SmileCareAPI\\SmileCareAPI\\Repositories\\Interface\\IDIAGDiagnosisRepository.cs",
+              "RelativeToolTip": "SmileCareAPI\\Repositories\\Interface\\IDIAGDiagnosisRepository.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAA9wCMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T13:32:27.238Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DiagnosisDTO.cs",
+              "DocumentMoniker": "D:\\Projects\\SmileCareAPI\\SmileCareAPI\\DTOs\\DiagnosisDTO.cs",
+              "RelativeDocumentMoniker": "SmileCareAPI\\DTOs\\DiagnosisDTO.cs",
+              "ToolTip": "D:\\Projects\\SmileCareAPI\\SmileCareAPI\\DTOs\\DiagnosisDTO.cs",
+              "RelativeToolTip": "SmileCareAPI\\DTOs\\DiagnosisDTO.cs",
+              "ViewState": "AgIAAIQAAAAAAAAAAAA2wI0AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T13:30:51.236Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Projects\\SmileCareAPI\\SmileCareAPI\\Program.cs",
+              "RelativeDocumentMoniker": "SmileCareAPI\\Program.cs",
+              "ToolTip": "D:\\Projects\\SmileCareAPI\\SmileCareAPI\\Program.cs",
+              "RelativeToolTip": "SmileCareAPI\\Program.cs",
+              "ViewState": "AgIAALcAAAAAAAAAAAAAAMEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-25T11:11:11.328Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

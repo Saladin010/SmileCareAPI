@@ -1,0 +1,125 @@
+{
+  "Version": 1,
+  "Hash": "vHR37f4pLueoHAjIr2JMsdNx0mdmVeICxW8k8uyET4w=",
+  "Source": "SmileCareAPI",
+  "BasePath": "_content/SmileCareAPI",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "SmileCareAPI\\wwwroot",
+      "Source": "SmileCareAPI",
+      "ContentRoot": "D:\\Projects\\SmileCareAPI\\SmileCareAPI\\wwwroot\\",
+      "BasePath": "_content/SmileCareAPI",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\Projects\\SmileCareAPI\\SmileCareAPI\\wwwroot\\uploads\\profiles\\aac97243-b9db-4339-a5ed-92f81a8986dc_316f54db-2dd2-4728-9df8-576b1536f48c.png",
+      "SourceId": "SmileCareAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\SmileCareAPI\\SmileCareAPI\\wwwroot\\",
+      "BasePath": "_content/SmileCareAPI",
+      "RelativePath": "uploads/profiles/aac97243-b9db-4339-a5ed-92f81a8986dc_316f54db-2dd2-4728-9df8-576b1536f48c#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "2vzbu4p87t",
+      "Integrity": "sncm+lO5TybNYER+de9RsySjPRgW/AN5pNBoEX4+vX0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\profiles\\aac97243-b9db-4339-a5ed-92f81a8986dc_316f54db-2dd2-4728-9df8-576b1536f48c.png"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "uploads/profiles/aac97243-b9db-4339-a5ed-92f81a8986dc_316f54db-2dd2-4728-9df8-576b1536f48c.2vzbu4p87t.png",
+      "AssetFile": "D:\\Projects\\SmileCareAPI\\SmileCareAPI\\wwwroot\\uploads\\profiles\\aac97243-b9db-4339-a5ed-92f81a8986dc_316f54db-2dd2-4728-9df8-576b1536f48c.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1399208"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sncm+lO5TybNYER+de9RsySjPRgW/AN5pNBoEX4+vX0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 25 Oct 2025 10:30:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2vzbu4p87t"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/profiles/aac97243-b9db-4339-a5ed-92f81a8986dc_316f54db-2dd2-4728-9df8-576b1536f48c.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-sncm+lO5TybNYER+de9RsySjPRgW/AN5pNBoEX4+vX0="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/profiles/aac97243-b9db-4339-a5ed-92f81a8986dc_316f54db-2dd2-4728-9df8-576b1536f48c.png",
+      "AssetFile": "D:\\Projects\\SmileCareAPI\\SmileCareAPI\\wwwroot\\uploads\\profiles\\aac97243-b9db-4339-a5ed-92f81a8986dc_316f54db-2dd2-4728-9df8-576b1536f48c.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1399208"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sncm+lO5TybNYER+de9RsySjPRgW/AN5pNBoEX4+vX0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 25 Oct 2025 10:30:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-sncm+lO5TybNYER+de9RsySjPRgW/AN5pNBoEX4+vX0="
+        }
+      ]
+    }
+  ]
+}
