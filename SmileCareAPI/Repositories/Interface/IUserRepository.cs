@@ -15,7 +15,7 @@ namespace SmileCareAPI.Repositories.Interface
 
         Task<UserDetailDto?> GetUserByIdAsync(string userId);
 
-        Task<(bool Success, string? UserId, string? ErrorMessage)> CreateUserAsync(CreateUserDto dto);
+        Task<(bool Success, string? UserId, string? ErrorMessage)> CreateUserAsync(CreateUserDto dto, string currentUserId, UserRole currentUserRole);
 
         Task<(bool Success, string? ErrorMessage)> UpdateUserAsync(string userId, UpdateUserDto dto);
 

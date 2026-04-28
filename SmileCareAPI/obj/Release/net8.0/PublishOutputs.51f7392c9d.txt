@@ -41,7 +41,6 @@ D:\Projects\SmileCareAPI\SmileCareAPI\obj\Release\net8.0\PubTmp\Out\Swashbuckle.
 D:\Projects\SmileCareAPI\SmileCareAPI\obj\Release\net8.0\PubTmp\Out\System.ClientModel.dll
 D:\Projects\SmileCareAPI\SmileCareAPI\obj\Release\net8.0\PubTmp\Out\System.Configuration.ConfigurationManager.dll
 D:\Projects\SmileCareAPI\SmileCareAPI\obj\Release\net8.0\PubTmp\Out\System.Drawing.Common.dll
-D:\Projects\SmileCareAPI\SmileCareAPI\obj\Release\net8.0\PubTmp\Out\System.Formats.Asn1.dll
 D:\Projects\SmileCareAPI\SmileCareAPI\obj\Release\net8.0\PubTmp\Out\System.IdentityModel.Tokens.Jwt.dll
 D:\Projects\SmileCareAPI\SmileCareAPI\obj\Release\net8.0\PubTmp\Out\System.Memory.Data.dll
 D:\Projects\SmileCareAPI\SmileCareAPI\obj\Release\net8.0\PubTmp\Out\System.Runtime.Caching.dll

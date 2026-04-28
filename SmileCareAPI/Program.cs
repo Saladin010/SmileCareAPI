@@ -221,38 +221,52 @@ namespace SmileCareAPI
                     }
 
                     // Seed roles if they don't exist - تحسين الأداء
-                    var roles = new[] { "Admin", "Doctor", "Receptionist", "Patient" };
+                    var roles = new[] { "Doctor", "Receptionist", "Patient" };
                     var existingRoles = roleManager.Roles.Select(r => r.Name).ToList();
 
                     foreach (var role in roles.Where(r => !existingRoles.Contains(r)))
                     {
                         await roleManager.CreateAsync(new IdentityRole(role));
                     }
-                    // Seed admin user if it doesn't exist - فقط مرة واحدة
-                    var adminEmail = "admin@gmail.com";
-                    var adminUser = await userManager.FindByEmailAsync(adminEmail);
-                    if (adminUser == null)
+                    
+                    // Seed doctor user if it doesn't exist - الدكتور الأساسي
+                    var doctorEmail = "doctor@smilecare.com";
+                    var doctorUser = await userManager.FindByEmailAsync(doctorEmail);
+                    if (doctorUser == null)
                     {
-                        adminUser = new User
+                        doctorUser = new User
                         {
-                            FirstName = "admin",
-                            LastName = "admin",
-                            UserName = adminEmail,
-                            Email = adminEmail,
-                            PhoneNumber = "01222656266",
+                            FirstName = "Dr.",
+                            LastName = "SmileCare",
+                            UserName = doctorEmail,
+                            Email = doctorEmail,
+                            PhoneNumber = "01234567890",
                             Gender = Gender.Male,
-                            DateOfBirth = new DateTime(1999, 8, 15),
-                            City = "admin",
-                            Role = UserRole.Admin,
+                            DateOfBirth = new DateTime(1980, 1, 1),
+                            City = "Cairo",
+                            Role = UserRole.Doctor,
                             IsActive = true,
                             CreatedAt = DateTime.UtcNow
                         };
-                       
-
-                        var result = await userManager.CreateAsync(adminUser, "Admin@123456");
+                        
+                        var result = await userManager.CreateAsync(doctorUser, "Doctor@123456");
                         if (result.Succeeded)
                         {
-                            await userManager.AddToRoleAsync(adminUser, "Admin");
+                            await userManager.AddToRoleAsync(doctorUser, "Doctor");
+                            
+                            // إنشاء سجل Doctor
+                            var doctor = new Doctor
+                            {
+                                UserId = doctorUser.Id,
+                                Specialization = "General Dentistry",
+                                LicenseNumber = "DEN-001",
+                                YearsOfExperience = 10,
+                                Credentials = "BDS, MDS",
+                                TotalPatients = 0,
+                                CompletedAppointments = 0
+                            };
+                            context.Doctors.Add(doctor);
+                            await context.SaveChangesAsync();
                         }
                     }
                 }

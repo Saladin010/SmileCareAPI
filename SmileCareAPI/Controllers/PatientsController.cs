@@ -23,7 +23,7 @@ namespace SmileCareAPI.Controllers
         /// Get all patients with filtering and pagination
         /// </summary>
         [HttpGet]
-        [Authorize(Roles = "Admin,Doctor,Receptionist")]
+        [Authorize(Roles = "Doctor,Receptionist")]
         public async Task<ActionResult<PaginatedPatientsResponseDtoP>> GetAllPatients([FromQuery] PatientFilterDto filter)
         {
             try
@@ -62,7 +62,7 @@ namespace SmileCareAPI.Controllers
         /// Create a new patient
         /// </summary>
         [HttpPost]
-        [Authorize(Roles = "Admin,Receptionist")]
+        [Authorize(Roles = "Doctor,Receptionist")]
         public async Task<ActionResult> CreatePatient([FromBody] CreatePatientDto dto)
         {
             try
@@ -87,7 +87,7 @@ namespace SmileCareAPI.Controllers
         /// Update patient information
         /// </summary>
         [HttpPut("{id}")]
-        [Authorize(Roles = "Admin,Receptionist")]
+        [Authorize(Roles = "Doctor,Receptionist")]
         public async Task<ActionResult> UpdatePatient(string id, [FromBody] UpdatePatientDto dto)
         {
             try
@@ -112,7 +112,7 @@ namespace SmileCareAPI.Controllers
         /// Delete a patient
         /// </summary>
         [HttpDelete("{id}")]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Doctor")]
         public async Task<ActionResult> DeletePatient(string id)
         {
             try
@@ -155,7 +155,7 @@ namespace SmileCareAPI.Controllers
         /// Update patient medical history
         /// </summary>
         [HttpPut("{id}/medical-history")]
-        [Authorize(Roles = "Admin,Doctor")]
+        [Authorize(Roles = "Doctor")]
         public async Task<ActionResult> UpdatePatientMedicalHistory(string id, [FromBody] UpdateMedicalHistoryDto dto)
         {
             try
@@ -324,7 +324,7 @@ namespace SmileCareAPI.Controllers
         /// Assign or change patient's assigned doctor
         /// </summary>
         [HttpPatch("{id}/assign-doctor")]
-        [Authorize(Roles = "Admin,Doctor")]
+        [Authorize(Roles = "Doctor")]
         public async Task<ActionResult> AssignDoctorToPatient(string id, [FromBody] AssignDoctorDto dto)
         {
             try
@@ -349,7 +349,7 @@ namespace SmileCareAPI.Controllers
         /// Get patients statistics (Admin/Doctor only)
         /// </summary>
         [HttpGet("statistics")]
-        [Authorize(Roles = "Admin,Doctor")]
+        [Authorize(Roles = "Doctor")]
         public async Task<ActionResult<PatientStatisticsDto>> GetPatientsStatistics()
         {
             try

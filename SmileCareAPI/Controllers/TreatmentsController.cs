@@ -207,7 +207,7 @@ namespace SmileCareAPI.Controllers
 
         // 3. POST /api/treatments
         [HttpPost]
-        [Authorize(Roles = "Admin,Doctor")]
+        [Authorize(Roles = "Doctor")]
         public async Task<ActionResult> CreateTreatment([FromBody] TRCreateTreatmentRequestDto request)
         {
             try
@@ -249,7 +249,7 @@ namespace SmileCareAPI.Controllers
 
         // 4. PUT /api/treatments/{id}
         [HttpPut("{id}")]
-        [Authorize(Roles = "Admin,Doctor")]
+        [Authorize(Roles = "Doctor")]
         public async Task<ActionResult> UpdateTreatment(int id, [FromBody] TRUpdateTreatmentRequestDto request)
         {
             try
@@ -301,7 +301,7 @@ namespace SmileCareAPI.Controllers
 
         // 5. DELETE /api/treatments/{id}
         [HttpDelete("{id}")]
-        [Authorize(Roles = "Admin,Doctor")]
+        [Authorize(Roles = "Doctor")]
         public async Task<ActionResult> DeleteTreatment(int id)
         {
             try
@@ -332,7 +332,7 @@ namespace SmileCareAPI.Controllers
 
         // 6. PATCH /api/treatments/{id}/status
         [HttpPatch("{id}/status")]
-        [Authorize(Roles = "Admin,Doctor")]
+        [Authorize(Roles = "Doctor")]
         public async Task<ActionResult> UpdateTreatmentStatus(
             int id,
             [FromBody] TRUpdateTreatmentStatusRequestDto request)
@@ -364,7 +364,7 @@ namespace SmileCareAPI.Controllers
 
         // 7. POST /api/treatments/{id}/sessions
         [HttpPost("{id}/sessions")]
-        [Authorize(Roles = "Admin,Doctor")]
+        [Authorize(Roles = "Doctor")]
         public async Task<ActionResult> CreateTreatmentSession(
             int id,
             [FromBody] TRCreateTreatmentSessionRequestDto request)
@@ -403,7 +403,7 @@ namespace SmileCareAPI.Controllers
 
         // 8. PATCH /api/treatments/{id}/sessions/{sessionId}/complete
         [HttpPatch("{id}/sessions/{sessionId}/complete")]
-        [Authorize(Roles = "Admin,Doctor")]
+        [Authorize(Roles = "Doctor")]
         public async Task<ActionResult> CompleteTreatmentSession(
             int id,
             int sessionId,
@@ -494,7 +494,7 @@ namespace SmileCareAPI.Controllers
         //    }
         //}
         [HttpPost("{id}/upload-images")]
-        [Authorize(Roles = "Admin,Doctor")]
+        [Authorize(Roles = "Doctor")]
         public async Task<ActionResult> UploadTreatmentImages(int id, [FromForm] TreatmentImagesUploadDto model)
         {
             try
@@ -542,7 +542,7 @@ namespace SmileCareAPI.Controllers
 
         // 10. PATCH /api/treatments/{id}/payment
         [HttpPatch("{id}/payment")]
-        [Authorize(Roles = "Admin,Doctor,Receptionist")]
+        [Authorize(Roles = "Doctor,Receptionist")]
         public async Task<ActionResult> UpdateTreatmentPayment(
             int id,
             [FromBody] TRUpdatePaymentRequestDto request)
@@ -578,7 +578,7 @@ namespace SmileCareAPI.Controllers
 
         // 11. GET /api/treatments/statistics
         [HttpGet("statistics")]
-        [Authorize(Roles = "Admin,Doctor")]
+        [Authorize(Roles = "Doctor")]
         public async Task<ActionResult<TRTreatmentStatisticsDto>> GetTreatmentStatistics(
             [FromQuery] string? doctorId,
             [FromQuery] DateTime? startDate,

@@ -349,7 +349,7 @@ namespace SmileCareAPI.Repositories.Implementation
 
             return userRole switch
             {
-                UserRole.Admin => true,
+
                 UserRole.Doctor => diagnosis.DoctorId == userId,
                 UserRole.Patient => diagnosis.PatientId == userId,
                 _ => false

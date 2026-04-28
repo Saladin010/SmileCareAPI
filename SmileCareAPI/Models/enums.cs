@@ -2,10 +2,9 @@
 {
     public enum UserRole
     {
-        Admin = 1,
-        Doctor = 2,
-        Receptionist = 3,
-        Patient = 4
+        Doctor = 1,
+        Receptionist = 2,
+        Patient = 3
     }
 
     public enum AppointmentStatus

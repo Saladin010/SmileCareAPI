@@ -21,12 +21,6 @@ D:\Projects\SmileCareAPI\SmileCareAPI\obj\Debug\net8.0\scopedcss\bundle\SmileCar
 D:\Projects\SmileCareAPI\SmileCareAPI\obj\Debug\net8.0\staticwebassets.build.json
 D:\Projects\SmileCareAPI\SmileCareAPI\obj\Debug\net8.0\staticwebassets.development.json
 D:\Projects\SmileCareAPI\SmileCareAPI\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-D:\Projects\SmileCareAPI\SmileCareAPI\obj\Debug\net8.0\staticwebassets\msbuild.SmileCareAPI.Microsoft.AspNetCore.StaticWebAssets.props
-D:\Projects\SmileCareAPI\SmileCareAPI\obj\Debug\net8.0\staticwebassets\msbuild.SmileCareAPI.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
-D:\Projects\SmileCareAPI\SmileCareAPI\obj\Debug\net8.0\staticwebassets\msbuild.build.SmileCareAPI.props
-D:\Projects\SmileCareAPI\SmileCareAPI\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.SmileCareAPI.props
-D:\Projects\SmileCareAPI\SmileCareAPI\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.SmileCareAPI.props
-D:\Projects\SmileCareAPI\SmileCareAPI\obj\Debug\net8.0\staticwebassets.pack.json
 D:\Projects\SmileCareAPI\SmileCareAPI\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 D:\Projects\SmileCareAPI\SmileCareAPI\obj\Debug\net8.0\SmileCar.7EF40B40.Up2Date
 D:\Projects\SmileCareAPI\SmileCareAPI\obj\Debug\net8.0\SmileCareAPI.dll
@@ -81,7 +75,6 @@ D:\Projects\SmileCareAPI\SmileCareAPI\bin\Debug\net8.0\System.Composition.Runtim
 D:\Projects\SmileCareAPI\SmileCareAPI\bin\Debug\net8.0\System.Composition.TypedParts.dll
 D:\Projects\SmileCareAPI\SmileCareAPI\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
 D:\Projects\SmileCareAPI\SmileCareAPI\bin\Debug\net8.0\System.Drawing.Common.dll
-D:\Projects\SmileCareAPI\SmileCareAPI\bin\Debug\net8.0\System.Formats.Asn1.dll
 D:\Projects\SmileCareAPI\SmileCareAPI\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
 D:\Projects\SmileCareAPI\SmileCareAPI\bin\Debug\net8.0\System.Memory.Data.dll
 D:\Projects\SmileCareAPI\SmileCareAPI\bin\Debug\net8.0\System.Runtime.Caching.dll
@@ -153,3 +146,10 @@ D:\Projects\SmileCareAPI\SmileCareAPI\bin\Debug\net8.0\runtimes\win\lib\net6.0\S
 D:\Projects\SmileCareAPI\SmileCareAPI\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 D:\Projects\SmileCareAPI\SmileCareAPI\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 D:\Projects\SmileCareAPI\SmileCareAPI\bin\Debug\net8.0\SmileCareAPI.staticwebassets.runtime.json
+D:\Projects\SmileCareAPI\SmileCareAPI\obj\Debug\net8.0\SmileCareAPI.sourcelink.json
+D:\Projects\SmileCareAPI\SmileCareAPI\obj\Debug\net8.0\rpswa.dswa.cache.json
+D:\Projects\SmileCareAPI\SmileCareAPI\obj\Debug\net8.0\rjimswa.dswa.cache.json
+D:\Projects\SmileCareAPI\SmileCareAPI\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+D:\Projects\SmileCareAPI\SmileCareAPI\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+D:\Projects\SmileCareAPI\SmileCareAPI\obj\Debug\net8.0\staticwebassets.build.json.cache
+D:\Projects\SmileCareAPI\SmileCareAPI\obj\Debug\net8.0\swae.build.ex.cache

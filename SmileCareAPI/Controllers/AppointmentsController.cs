@@ -67,7 +67,7 @@ namespace SmileCareAPI.Controllers
 
         // POST: api/appointments
         [HttpPost]
-        [Authorize(Roles = "Admin,Receptionist,Doctor,Patient")]
+        [Authorize(Roles = "Doctor,Receptionist,Patient")]
         public async Task<ActionResult> CreateAppointment([FromBody] CreateAppointmentAPPDto dto)
         {
             try
@@ -123,7 +123,7 @@ namespace SmileCareAPI.Controllers
 
         // PUT: api/appointments/{id}
         [HttpPut("{id}")]
-        [Authorize(Roles = "Admin,Receptionist,Doctor")]
+        [Authorize(Roles = "Doctor,Receptionist")]
         public async Task<ActionResult> UpdateAppointment(int id, [FromBody] UpdateAppointmentAPPDto dto)
         {
             try
@@ -168,7 +168,7 @@ namespace SmileCareAPI.Controllers
 
         // PATCH: api/appointments/{id}/confirm
         [HttpPatch("{id}/confirm")]
-        [Authorize(Roles = "Admin,Receptionist,Doctor")]
+        [Authorize(Roles = "Doctor,Receptionist")]
         public async Task<ActionResult> ConfirmAppointment(int id, [FromBody] ConfirmAppointmentAPPDto dto)
         {
             try
@@ -211,7 +211,7 @@ namespace SmileCareAPI.Controllers
 
         // PATCH: api/appointments/{id}/complete
         [HttpPatch("{id}/complete")]
-        [Authorize(Roles = "Admin,Doctor")]
+        [Authorize(Roles = "Doctor")]
         public async Task<ActionResult> CompleteAppointment(int id)
         {
             try
@@ -233,7 +233,7 @@ namespace SmileCareAPI.Controllers
 
         // PATCH: api/appointments/{id}/no-show
         [HttpPatch("{id}/no-show")]
-        [Authorize(Roles = "Admin,Receptionist,Doctor")]
+        [Authorize(Roles = "Doctor,Receptionist")]
         public async Task<ActionResult> MarkAsNoShow(int id)
         {
             try
@@ -293,7 +293,7 @@ namespace SmileCareAPI.Controllers
 
         // POST: api/appointments/{id}/send-reminder
         [HttpPost("{id}/send-reminder")]
-        [Authorize(Roles = "Admin,Receptionist,Doctor")]
+        [Authorize(Roles = "Doctor,Receptionist")]
         public async Task<ActionResult> SendReminder(int id, [FromBody] SendReminderAPPDto dto)
         {
             try
@@ -315,7 +315,7 @@ namespace SmileCareAPI.Controllers
 
         // GET: api/appointments/statistics
         [HttpGet("statistics")]
-        [Authorize(Roles = "Admin,Receptionist,Doctor")]
+        [Authorize(Roles = "Doctor,Receptionist")]
         public async Task<ActionResult<AppointmentStatisticsAPPDto>> GetStatistics(
             [FromQuery] StatisticsQueryParametersAPPDto query)
         {
@@ -334,7 +334,7 @@ namespace SmileCareAPI.Controllers
 
         // GET: api/appointments/today
         [HttpGet("today")]
-        [Authorize(Roles = "Admin,Receptionist,Doctor")]
+        [Authorize(Roles = "Doctor,Receptionist")]
         public async Task<ActionResult<AppointmentListResponseAPPDto>> GetTodayAppointments(
             [FromQuery] int page = 1,
             [FromQuery] int pageSize = 20)

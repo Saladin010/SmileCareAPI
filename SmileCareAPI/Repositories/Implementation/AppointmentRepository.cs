@@ -32,7 +32,7 @@ namespace SmileCareAPI.Repositories.Implementation
             {
                 UserRole.Doctor => queryable.Where(a => a.DoctorId == currentUserId),
                 UserRole.Patient => queryable.Where(a => a.PatientId == currentUserId),
-                _ => queryable // Admin and Receptionist see all
+                _ => queryable // Receptionist sees all
             };
 
             // Apply filters
@@ -677,20 +677,20 @@ namespace SmileCareAPI.Repositories.Implementation
            int durationMinutes,
            int? excludeAppointmentId = null)
         {
-            var endTime = startTime.Add(TimeSpan.FromMinutes(durationMinutes));
+            int startMinutes = startTime.Hours * 60 + startTime.Minutes;
+            int endMinutes = startMinutes + durationMinutes;
 
-            var conflictingAppointment = await _context.Appointments
+            var result = await _context.Appointments
                 .Where(a => a.DoctorId == doctorId &&
                             a.AppointmentDate.Date == date.Date &&
                             a.Status != AppointmentStatus.Cancelled &&
                             (excludeAppointmentId == null || a.Id != excludeAppointmentId))
                 .AnyAsync(a =>
-                    (startTime >= a.StartTime && startTime < a.StartTime.Add(TimeSpan.FromMinutes(a.DurationMinutes))) ||
-                    (endTime > a.StartTime && endTime <= a.StartTime.Add(TimeSpan.FromMinutes(a.DurationMinutes))) ||
-                    (startTime <= a.StartTime && endTime >= a.StartTime.Add(TimeSpan.FromMinutes(a.DurationMinutes)))
+                    startMinutes < (a.StartTime.Hours * 60 + a.StartTime.Minutes + a.DurationMinutes) &&
+                    endMinutes > (a.StartTime.Hours * 60 + a.StartTime.Minutes)
                 );
 
-            return !conflictingAppointment;
+            return !result;
         }
 
 
@@ -701,20 +701,20 @@ namespace SmileCareAPI.Repositories.Implementation
       int durationMinutes,
       int? excludeAppointmentId = null)
         {
-            var endTime = startTime.Add(TimeSpan.FromMinutes(durationMinutes));
+            int startMinutes = startTime.Hours * 60 + startTime.Minutes;
+            int endMinutes = startMinutes + durationMinutes;
 
-            var conflictingAppointment = await _context.Appointments
+            var result = await _context.Appointments
                 .Where(a => a.PatientId == patientId &&
                             a.AppointmentDate.Date == date.Date &&
                             a.Status != AppointmentStatus.Cancelled &&
                             (excludeAppointmentId == null || a.Id != excludeAppointmentId))
                 .AnyAsync(a =>
-                    (startTime >= a.StartTime && startTime < a.StartTime.Add(TimeSpan.FromMinutes(a.DurationMinutes))) ||
-                    (endTime > a.StartTime && endTime <= a.StartTime.Add(TimeSpan.FromMinutes(a.DurationMinutes))) ||
-                    (startTime <= a.StartTime && endTime >= a.StartTime.Add(TimeSpan.FromMinutes(a.DurationMinutes)))
+                    startMinutes < (a.StartTime.Hours * 60 + a.StartTime.Minutes + a.DurationMinutes) &&
+                    endMinutes > (a.StartTime.Hours * 60 + a.StartTime.Minutes)
                 );
 
-            return conflictingAppointment;
+            return result;
         }
 
 

@@ -110,7 +110,7 @@ namespace SmileCareAPI.Controllers
         /// </summary>
         /// <param name="dto">Diagnosis creation data</param>
         [HttpPost]
-        [Authorize(Roles = "Doctor,Admin")]
+        [Authorize(Roles = "Doctor")]
         public async Task<ActionResult<DIAGCreateResponseDto>> CreateDiagnosis([FromBody] DIAGCreateDiagnosisDto dto)
         {
             try
@@ -145,7 +145,7 @@ namespace SmileCareAPI.Controllers
         /// <param name="id">Diagnosis ID</param>
         /// <param name="dto">Update data</param>
         [HttpPut("{id}")]
-        [Authorize(Roles = "Doctor,Admin")]
+        [Authorize(Roles = "Doctor")]
         public async Task<ActionResult<DIAGMessageResponseDto>> UpdateDiagnosis(
             int id,
             [FromBody] DIAGUpdateDiagnosisDto dto)
@@ -180,7 +180,7 @@ namespace SmileCareAPI.Controllers
         /// </summary>
         /// <param name="id">Diagnosis ID</param>
         [HttpDelete("{id}")]
-        [Authorize(Roles = "Doctor,Admin")]
+        [Authorize(Roles = "Doctor")]
         public async Task<ActionResult<DIAGMessageResponseDto>> DeleteDiagnosis(int id)
         {
             try
@@ -218,7 +218,7 @@ namespace SmileCareAPI.Controllers
         /// <param name="id">Diagnosis ID</param>
         /// <param name="dto">Status update data</param>
         [HttpPatch("{id}/status")]
-        [Authorize(Roles = "Doctor,Admin")]
+        [Authorize(Roles = "Doctor")]
         public async Task<ActionResult<DIAGMessageResponseDto>> UpdateDiagnosisStatus(
             int id,
             [FromBody] DIAGUpdateStatusDto dto)
@@ -255,7 +255,7 @@ namespace SmileCareAPI.Controllers
         /// <param name="startDate">Filter by start date</param>
         /// <param name="endDate">Filter by end date</param>
         [HttpGet("statistics")]
-        [Authorize(Roles = "Doctor,Admin")]
+        [Authorize(Roles = "Doctor")]
         public async Task<ActionResult<DIAGStatisticsDto>> GetDiagnosisStatistics(
             [FromQuery] string? doctorId = null,
             [FromQuery] DateTime? startDate = null,

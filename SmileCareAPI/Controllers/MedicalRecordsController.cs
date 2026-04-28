@@ -10,7 +10,7 @@ namespace SmileCareAPI.Controllers
   
     [Route("api/medical-records")]
     [ApiController]
-    [Authorize(Roles = "Doctor,Admin")]
+    [Authorize(Roles = "Doctor")]
     public class MedicalRecordsController : ControllerBase
     {
         private readonly IMedicalRecordRepository _medicalRecordRepository;
@@ -254,7 +254,7 @@ namespace SmileCareAPI.Controllers
 
         // DELETE: api/medical-records/{id}
         [HttpDelete("{id}")]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Doctor")]
         public async Task<ActionResult<MedRecordOperationResponseDto>> DeleteMedicalRecord(int id)
         {
             try

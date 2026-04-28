@@ -7,6 +7,7 @@ using System.Text;
 
 namespace SmileCareAPI.Helpers
 {
+
     public class JwtHelper
     {
         private readonly IConfiguration _configuration;
@@ -21,23 +22,26 @@ namespace SmileCareAPI.Helpers
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
 
+            // استخدام أسماء قصيرة بدل URIs الطويلة
             var claims = new[]
             {
-                new Claim(ClaimTypes.NameIdentifier, user.Id),
-                new Claim(ClaimTypes.Name, user.UserName),
-                new Claim(ClaimTypes.Email, user.Email),
-                new Claim(ClaimTypes.GivenName, user.FirstName),
-                new Claim(ClaimTypes.Surname, user.LastName),
-                new Claim(ClaimTypes.Role, user.Role.ToString()),
+                new Claim("nameid", user.Id),
+                new Claim("unique_name", user.UserName),
+                new Claim("email", user.Email),
+                new Claim("given_name", user.FirstName),
+                new Claim("family_name", user.LastName),
+                new Claim("role", user.Role.ToString()),
                 new Claim("UserId", user.Id),
-                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
+                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+                new Claim(JwtRegisteredClaimNames.Iat, DateTimeOffset.UtcNow.ToUnixTimeSeconds().ToString()),
+                new Claim(JwtRegisteredClaimNames.Nbf, DateTimeOffset.UtcNow.ToUnixTimeSeconds().ToString())
             };
 
             var token = new JwtSecurityToken(
                 issuer: _configuration["Jwt:Issuer"],
                 audience: _configuration["Jwt:Audience"],
                 claims: claims,
-                expires: DateTime.UtcNow.AddDays(Convert.ToDouble(_configuration["Jwt:AccessTokenExpirationMinutes"])),
+                expires: DateTime.UtcNow.AddMinutes(Convert.ToDouble(_configuration["Jwt:AccessTokenExpirationMinutes"])),
                 signingCredentials: credentials
             );
 
@@ -79,7 +83,10 @@ namespace SmileCareAPI.Helpers
         {
             var tokenHandler = new JwtSecurityTokenHandler();
             var jwtToken = tokenHandler.ReadJwtToken(token);
-            return jwtToken.Claims.FirstOrDefault(c => c.Type == "UserId")?.Value;
+
+            // يمكن البحث بـ UserId أو nameid
+            return jwtToken.Claims.FirstOrDefault(c => c.Type == "UserId")?.Value
+                   ?? jwtToken.Claims.FirstOrDefault(c => c.Type == "nameid")?.Value;
         }
     }
 }

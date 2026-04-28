@@ -159,8 +159,27 @@ namespace SmileCareAPI.Repositories.Implementation
             return userDetail;
         }
 
-        public async Task<(bool Success, string? UserId, string? ErrorMessage)> CreateUserAsync(CreateUserDto dto)
+        public async Task<(bool Success, string? UserId, string? ErrorMessage)> CreateUserAsync(CreateUserDto dto, string currentUserId, UserRole currentUserRole)
         {
+            // Validating permissions
+            if (currentUserRole == UserRole.Receptionist && dto.Role != UserRole.Patient)
+            {
+                return (false, null, "Receptionists can only create patients");
+            }
+
+            if (currentUserRole == UserRole.Patient)
+            {
+                return (false, null, "Patients cannot create users");
+            }
+
+            if (dto.Role == UserRole.Doctor)
+            {
+                var existingDoctor = await _context.Users.AnyAsync(u => u.Role == UserRole.Doctor);
+                if (existingDoctor)
+                {
+                    return (false, null, "Only one doctor is allowed in the system");
+                }
+            }
             // Check if email already exists
             var existingUser = await _userManager.FindByEmailAsync(dto.Email);
             if (existingUser != null)
@@ -328,6 +347,16 @@ namespace SmileCareAPI.Repositories.Implementation
                 return (false, "User not found");
             }
 
+            // Prevent deleting the only doctor
+            if (user.Role == UserRole.Doctor)
+            {
+                var totalDoctors = await _context.Users.CountAsync(u => u.Role == UserRole.Doctor);
+                if (totalDoctors <= 1)
+                {
+                    return (false, "Cannot delete the only doctor in the system");
+                }
+            }
+
             // Check if user has related data that prevents deletion
             if (user.Role == UserRole.Doctor)
             {
@@ -420,7 +449,7 @@ namespace SmileCareAPI.Repositories.Implementation
                 await file.CopyToAsync(stream);
             }
 
-            var profilePictureUrl = $"/uploads/profiles/{fileName}";
+            var profilePictureUrl = $"https://saladin.runasp.net/uploads/profiles/{fileName}";
             user.ProfilePicture = profilePictureUrl;
             await _context.SaveChangesAsync();
 
@@ -454,7 +483,7 @@ namespace SmileCareAPI.Repositories.Implementation
             var statistics = new UserStatisticsDto
             {
                 TotalUsers = await _context.Users.CountAsync(),
-                TotalAdmins = await _context.Users.CountAsync(u => u.Role == UserRole.Admin),
+
                 TotalDoctors = await _context.Users.CountAsync(u => u.Role == UserRole.Doctor),
                 TotalReceptionists = await _context.Users.CountAsync(u => u.Role == UserRole.Receptionist),
                 TotalPatients = await _context.Users.CountAsync(u => u.Role == UserRole.Patient),

@@ -200,7 +200,7 @@ namespace SmileCareAPI.Controllers
         /// Update working hours for a specific doctor
         /// </summary>
         [HttpPut("{id}/working-hours")]
-        [Authorize(Roles = "Admin,Doctor")]
+        [Authorize(Roles = "Doctor")]
         public async Task<IActionResult> UpdateDoctorWorkingHours(
             string id,
             [FromBody] List<UpdateWorkingHoursDto> workingHours)
@@ -279,7 +279,7 @@ namespace SmileCareAPI.Controllers
         /// Add a holiday for a specific doctor
         /// </summary>
         [HttpPost("{id}/holidays")]
-        [Authorize(Roles = "Admin,Doctor")]
+        [Authorize(Roles = "Doctor")]
         public async Task<IActionResult> AddDoctorHoliday(
             string id,
             [FromBody] AddHolidayDto holidayDto)
@@ -341,7 +341,7 @@ namespace SmileCareAPI.Controllers
         /// Delete a specific holiday
         /// </summary>
         [HttpDelete("holidays/{holidayId}")]
-        [Authorize(Roles = "Admin,Doctor")]
+        [Authorize(Roles = "Doctor")]
         public async Task<IActionResult> DeleteDoctorHoliday(int holidayId, [FromQuery] string doctorId)
         {
             try

@@ -11,7 +11,6 @@ namespace SmileCareAPI.Data
         {
         }
 
-        // DbSet for each entity
         public DbSet<Doctor> Doctors { get; set; }
         public DbSet<Patient> Patients { get; set; }
         public DbSet<OtpCode> OtpCodes { get; set; }
@@ -39,7 +38,6 @@ namespace SmileCareAPI.Data
         {
             base.OnModelCreating(builder);
 
-            // Configure composite keys and relationships if needed
             builder.Entity<Doctor>()
                 .HasKey(d => d.UserId);
 
@@ -49,7 +47,6 @@ namespace SmileCareAPI.Data
             builder.Entity<MedicalHistory>()
                 .HasKey(mh => mh.PatientId);
 
-            // Configure decimal precision for monetary and probability fields
             builder.Entity<Treatment>()
                 .Property(t => t.EstimatedCost)
                 .HasPrecision(10, 2);

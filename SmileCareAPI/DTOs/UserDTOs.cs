@@ -211,7 +211,7 @@ namespace SmileCareAPI.DTOs
     public class UserStatisticsDto
     {
         public int TotalUsers { get; set; }
-        public int TotalAdmins { get; set; }
+
         public int TotalDoctors { get; set; }
         public int TotalReceptionists { get; set; }
         public int TotalPatients { get; set; }

@@ -58,7 +58,6 @@ D:\Projects\SmileCareAPI\SmileCareAPI\bin\Release\net8.0\System.Composition.Runt
 D:\Projects\SmileCareAPI\SmileCareAPI\bin\Release\net8.0\System.Composition.TypedParts.dll
 D:\Projects\SmileCareAPI\SmileCareAPI\bin\Release\net8.0\System.Configuration.ConfigurationManager.dll
 D:\Projects\SmileCareAPI\SmileCareAPI\bin\Release\net8.0\System.Drawing.Common.dll
-D:\Projects\SmileCareAPI\SmileCareAPI\bin\Release\net8.0\System.Formats.Asn1.dll
 D:\Projects\SmileCareAPI\SmileCareAPI\bin\Release\net8.0\System.IdentityModel.Tokens.Jwt.dll
 D:\Projects\SmileCareAPI\SmileCareAPI\bin\Release\net8.0\System.Memory.Data.dll
 D:\Projects\SmileCareAPI\SmileCareAPI\bin\Release\net8.0\System.Runtime.Caching.dll
@@ -140,12 +139,6 @@ D:\Projects\SmileCareAPI\SmileCareAPI\obj\Release\net8.0\scopedcss\bundle\SmileC
 D:\Projects\SmileCareAPI\SmileCareAPI\obj\Release\net8.0\staticwebassets.build.json
 D:\Projects\SmileCareAPI\SmileCareAPI\obj\Release\net8.0\staticwebassets.development.json
 D:\Projects\SmileCareAPI\SmileCareAPI\obj\Release\net8.0\staticwebassets.build.endpoints.json
-D:\Projects\SmileCareAPI\SmileCareAPI\obj\Release\net8.0\staticwebassets\msbuild.SmileCareAPI.Microsoft.AspNetCore.StaticWebAssets.props
-D:\Projects\SmileCareAPI\SmileCareAPI\obj\Release\net8.0\staticwebassets\msbuild.SmileCareAPI.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
-D:\Projects\SmileCareAPI\SmileCareAPI\obj\Release\net8.0\staticwebassets\msbuild.build.SmileCareAPI.props
-D:\Projects\SmileCareAPI\SmileCareAPI\obj\Release\net8.0\staticwebassets\msbuild.buildMultiTargeting.SmileCareAPI.props
-D:\Projects\SmileCareAPI\SmileCareAPI\obj\Release\net8.0\staticwebassets\msbuild.buildTransitive.SmileCareAPI.props
-D:\Projects\SmileCareAPI\SmileCareAPI\obj\Release\net8.0\staticwebassets.pack.json
 D:\Projects\SmileCareAPI\SmileCareAPI\obj\Release\net8.0\staticwebassets.upToDateCheck.txt
 D:\Projects\SmileCareAPI\SmileCareAPI\obj\Release\net8.0\SmileCar.7EF40B40.Up2Date
 D:\Projects\SmileCareAPI\SmileCareAPI\obj\Release\net8.0\SmileCareAPI.dll
@@ -153,3 +146,10 @@ D:\Projects\SmileCareAPI\SmileCareAPI\obj\Release\net8.0\refint\SmileCareAPI.dll
 D:\Projects\SmileCareAPI\SmileCareAPI\obj\Release\net8.0\SmileCareAPI.pdb
 D:\Projects\SmileCareAPI\SmileCareAPI\obj\Release\net8.0\SmileCareAPI.genruntimeconfig.cache
 D:\Projects\SmileCareAPI\SmileCareAPI\obj\Release\net8.0\ref\SmileCareAPI.dll
+D:\Projects\SmileCareAPI\SmileCareAPI\obj\Release\net8.0\SmileCareAPI.sourcelink.json
+D:\Projects\SmileCareAPI\SmileCareAPI\obj\Release\net8.0\rpswa.dswa.cache.json
+D:\Projects\SmileCareAPI\SmileCareAPI\obj\Release\net8.0\rjimswa.dswa.cache.json
+D:\Projects\SmileCareAPI\SmileCareAPI\obj\Release\net8.0\rjsmrazor.dswa.cache.json
+D:\Projects\SmileCareAPI\SmileCareAPI\obj\Release\net8.0\rjsmcshtml.dswa.cache.json
+D:\Projects\SmileCareAPI\SmileCareAPI\obj\Release\net8.0\staticwebassets.build.json.cache
+D:\Projects\SmileCareAPI\SmileCareAPI\obj\Release\net8.0\swae.build.ex.cache

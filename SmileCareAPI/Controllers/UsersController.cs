@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using SmileCareAPI.DTOs;
 using SmileCareAPI.Models;
 using SmileCareAPI.Repositories.Interface;
+using System.Security.Claims;
 
 namespace SmileCareAPI.Controllers
 {
@@ -19,7 +20,7 @@ namespace SmileCareAPI.Controllers
             _userRepository = userRepository;
         }
         [HttpGet]
-        [Authorize(Roles = "Admin,Receptionist")]
+        [Authorize(Roles = "Doctor,Receptionist")]
         public async Task<ActionResult<UsersListResponseDto>> GetAllUsers(
          [FromQuery] UserRole? role = null,
          [FromQuery] string? status = null,
@@ -52,7 +53,7 @@ namespace SmileCareAPI.Controllers
         /// <param name="id">User ID</param>
         /// <returns>User details</returns>
         [HttpGet("{id}")]
-        [Authorize(Roles = "Admin,Receptionist,Doctor")]
+        [Authorize(Roles = "Doctor,Receptionist")]
         public async Task<ActionResult<UserDetailDto>> GetUserById(string id)
         {
             try
@@ -77,7 +78,7 @@ namespace SmileCareAPI.Controllers
         /// <param name="dto">User creation data</param>
         /// <returns>Created user ID</returns>
         [HttpPost]
-        [Authorize(Roles = "Admin,Receptionist")]
+        [Authorize(Roles = "Doctor,Receptionist")]
         public async Task<ActionResult> CreateUser([FromBody] CreateUserDto dto)
         {
             try
@@ -87,7 +88,10 @@ namespace SmileCareAPI.Controllers
                     return BadRequest(ModelState);
                 }
 
-                var (success, userId, errorMessage) = await _userRepository.CreateUserAsync(dto);
+                var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier)!;
+                var currentUserRole = Enum.Parse<UserRole>(User.FindFirstValue(ClaimTypes.Role)!);
+
+                var (success, userId, errorMessage) = await _userRepository.CreateUserAsync(dto, currentUserId, currentUserRole);
                 if (!success)
                 {
                     return BadRequest(new { message = errorMessage });
@@ -108,7 +112,7 @@ namespace SmileCareAPI.Controllers
         /// <param name="dto">Updated user data</param>
         /// <returns>Success message</returns>
         [HttpPut("{id}")]
-        [Authorize(Roles = "Admin,Receptionist")]
+        [Authorize(Roles = "Doctor,Receptionist")]
         public async Task<ActionResult> UpdateUser(string id, [FromBody] UpdateUserDto dto)
         {
             try
@@ -138,7 +142,7 @@ namespace SmileCareAPI.Controllers
         /// <param name="id">User ID</param>
         /// <returns>Success message</returns>
         [HttpDelete("{id}")]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Doctor")]
         public async Task<ActionResult> DeleteUser(string id)
         {
             try
@@ -163,7 +167,7 @@ namespace SmileCareAPI.Controllers
         /// <param name="id">User ID</param>
         /// <returns>Updated status</returns>
         [HttpPatch("{id}/toggle-status")]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Doctor")]
         public async Task<ActionResult<ToggleStatusResponseDto>> ToggleUserStatus(string id)
         {
             try
@@ -193,7 +197,7 @@ namespace SmileCareAPI.Controllers
         /// <param name="file">Image file</param>
         /// <returns>Profile picture URL</returns>
         [HttpPost("{id}/upload-profile-picture")]
-        [Authorize(Roles = "Admin,Receptionist")]
+        [Authorize(Roles = "Doctor,Receptionist")]
         public async Task<ActionResult<UploadProfilePictureResponseDto>> UploadProfilePicture(string id, IFormFile file)
         {
             try
@@ -222,7 +226,7 @@ namespace SmileCareAPI.Controllers
         /// <param name="id">User ID</param>
         /// <returns>Success message</returns>
         [HttpDelete("{id}/delete-profile-picture")]
-        [Authorize(Roles = "Admin,Receptionist")]
+        [Authorize(Roles = "Doctor,Receptionist")]
         public async Task<ActionResult> DeleteProfilePicture(string id)
         {
             try
@@ -246,7 +250,7 @@ namespace SmileCareAPI.Controllers
         /// </summary>
         /// <returns>User statistics</returns>
         [HttpGet("statistics")]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Doctor")]
         public async Task<ActionResult<UserStatisticsDto>> GetUserStatistics()
         {
             try
